@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script>
+var app = angular.module("myApp",[]);
+app.controller("myCtrl",function($scope){
+ 
+});
+
+app.directive("mySlider",function(){
+     return{
+          template: "<ul><li ng-repeat='i in slides'>{{i}}</li></ul>",
+         compile:function(tElement,tAttributes){
+                
+              
+            return{
+                  pre:function(scope,iElement,iAttributes){
+                   
+                   
+                  },
+                  post:function(scope,iElement,iAttributes){
+
+                    
+
+                  }
+            }
+
+         },
+         controller:function($scope,$element,$attrs){
+             //console.log($attrs.test + "controller");  
+
+             
+         }, 
+     }
+});
+
+</script>
+</head>
+
+
+<body ng-app="myApp" ng-controller="myCtrl">  
+  <div my-navigation></div>
+
+
+</body>
+</html> 
+
